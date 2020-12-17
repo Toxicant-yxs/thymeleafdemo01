@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--if的使用-->
+    <!--成立时显示-->
+    <h1 th:if="${result} == 'yes'">结果是true</h1>
+    <!--不成立时显示-->
+    <h1 th:unless="${result} == 'no'">结果是false</h1>
+
+    <!--switch-->
+    <div th:switch="${menu}">
+        <p th:case="admin">user is admin</p>
+        <p th:case="${manager}">user is manager</p>
+    </div>
+</body>
+</html>
