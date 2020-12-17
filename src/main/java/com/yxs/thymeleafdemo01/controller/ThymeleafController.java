@@ -13,7 +13,7 @@ import java.util.*;
 public class ThymeleafController {
     @GetMapping("/index")
     public String indexPage(Model model) {
-        System.out.println("进入控制层");
+        System.out.println("进入控制层=========");
         model.addAttribute("msg","hello thymeleaf");
         return "index";
     }
