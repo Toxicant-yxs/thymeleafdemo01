@@ -1,11 +1,9 @@
 package com.yxs.thymeleafdemo01.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import com.yxs.thymeleafdemo01.bean.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
 
@@ -59,6 +57,11 @@ public class ThymeleafController {
         model.addAttribute("menu","ii");
         model.addAttribute("manager","ii");
         return "index5";
+    }
+
+    @GetMapping("/index6")
+    public String indexPage6(Model model) {
+        return "index6";
     }
 
     @GetMapping("/index7")

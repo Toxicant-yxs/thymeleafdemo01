@@ -5,10 +5,12 @@
     <title>Title</title>
 </head>
 <body>
+    <!--给标签赋值th:text-->
     <h1 th:text="${userName}"></h1>
+    <!--给属性赋值th:value  th:属性名称-->
     <input type="text" th:value="${userName}">
-    <em th:size="${userName}"></em>
-    <!--拼接-->
+    <!--字符串拼接-->
+    <span th:text="${userName} + 'is superman'"></span>
     <span th:text="|${userName} is superman|"></span>
 </body>
 </html>

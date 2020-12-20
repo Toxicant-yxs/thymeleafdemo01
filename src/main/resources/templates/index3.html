@@ -11,17 +11,27 @@
             <td>用户名称</td>
             <td>用户年龄</td>
         </tr>
-        <!--interStart是状态变量 名称自定义-->
-        <tr th:each="user,interStart:${list}">
+        <!--iterStat称作状态变量 名称可自定义-->
+        <tr th:each="user,iterStat:${list}">
             <td th:text="${user.id}"></td>
             <td th:text="${user.name}"></td>
             <td th:text="${user.age}"></td>
-            <td th:text="${interStart.index}"></td>
-            <td th:text="${interStart.count}"></td>
-            <td th:text="${interStart.size}"></td>
-            <td th:text="${interStart.current}"></td>
-            <td th:text="${interStart.even}"></td>
-            <td th:text="${interStart.odd}"></td>
+            <!--当前迭代对象的index（从0开始）-->
+            <td th:text="${iterStat.index}"></td>
+            <!--当前迭代对象的index（从1开始）-->
+            <td th:text="${iterStat.count}"></td>
+            <!--被迭代对象的大小，即集合的size-->
+            <td th:text="${iterStat.size}"></td>
+            <!--当前迭代变量-->
+            <td th:text="${iterStat.current}"></td>
+            <!--布尔值，当前循环是否为偶数（从0开始）-->
+            <td th:text="${iterStat.even}"></td>
+            <!--布尔值，当前循环是否为偶数（从0开始）-->
+            <td th:text="${iterStat.odd}"></td>
+            <!--布尔值，当前循环是否是第一个-->
+            <td th:text="${iterStat.first}"></td>
+            <!--布尔值，当前循环是否是最后一个-->
+            <td th:text="${iterStat.last}"></td>
         </tr>
     </table>
 </body>

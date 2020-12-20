@@ -10,7 +10,6 @@
     <h1 th:if="${result} == 'yes'">结果是true</h1>
     <!--不成立时显示-->
     <h1 th:unless="${result} == 'no'">结果是false</h1>
-
     <!--switch-->
     <div th:switch="${menu}">
         <p th:case="admin">user is admin</p>
